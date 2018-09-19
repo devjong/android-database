@@ -100,3 +100,45 @@ sql> SELECT *FROM city
 		ORDER BY population DESC;
 ```
 
+
+
+#### 모바일 데이터 베이스란?
+
+- 데이터 베이스
+
+  - 여개의 테이블을 담고 있는 하나의 그릇 역할
+
+
+- 데이터 베이스를 만드는 가장 간단한 방법
+  - Context 클래스에 정의된 openOrCreateDataase() 메소드를 사용
+  - 애플리케이션에서 기본적으로 사용하든 Activity 클래스가 Context를 상속한 것이므로 액티비티 안에서 데이터베이스 생성가능
+
+
+
+#### 데이터베이스와 테이블 만들기
+
+- 데이터베이스를 열거나 삭제할 수 있는 메소드
+
+```JAVA
+public abstract SQLiteDatabase openOrCreateDatabase (String name, int mode, SQLiteDatabase.CursorFactory factory)
+    
+public abstract boolean deleteDatabase (String name)
+```
+
+
+
+- SQL을 실행할 수 있는 메소드
+
+  - createm insert, delete 등 결과데이터가 없는 SQL문
+
+    ```JAVA
+    public void exeSQL(String sql) throws SQLException
+    ```
+
+  - select와 같이 조회에 따른 결과 데이터가 있는 SQL문
+
+    ```JAVA
+    public cursor rawQuery(String sql) throws SQLException
+    ```
+
+
