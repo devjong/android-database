@@ -129,7 +129,7 @@ public abstract boolean deleteDatabase (String name)
 
 - SQL을 실행할 수 있는 메소드
 
-  - createm insert, delete 등 결과데이터가 없는 SQL문
+  - create, insert, delete 등 결과데이터가 없는 SQL문
 
     ```JAVA
     public void exeSQL(String sql) throws SQLException
